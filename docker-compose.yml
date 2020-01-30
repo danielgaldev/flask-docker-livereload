@@ -9,3 +9,10 @@ services:
       - .:/app
     ports:
       - 5000:5000
+  livereload:
+    image: ocasta/livereload
+    ports:
+      - "35729:35729"
+    volumes:
+      - .:/usr/src/livereload-watch
+      
