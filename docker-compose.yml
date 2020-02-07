@@ -1,6 +1,6 @@
-version: '3'
+version: "3"
 
-services: 
+services:
   app:
     build:
       context: .
@@ -9,11 +9,11 @@ services:
       - .:/app
     ports:
       - 5000:5000
-  livereload:
+  bs:
     build:
-      context: livereload
+      context: bs
     ports:
-      - 35729:35729
+      - 3000:3000
+      - 3001:3001
     volumes:
-      - ./src:/livereload
-      
+      - ./src:/code
